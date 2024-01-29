@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Евгений Мушков](https://up.htmlacademy.ru/htmlcss/39/user/2355955).
-* Наставник: `Неизвестно`.
+- Студент: [Евгений Мушков](https://up.htmlacademy.ru/htmlcss/39/user/2355955).
+- Наставник: [Александр Зиновьев](https://htmlacademy.ru/profile/id198751).
 
 ---
 
