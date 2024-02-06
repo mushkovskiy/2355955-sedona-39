@@ -13,19 +13,13 @@
       <nav class="main-navigation">
         <ul class="navigation-list">
           <li class="navigation-item navigation-item-current">
-            <a class="navigation-link" href="#">
-              <span>Главная</span>
-            </a>
+            <a class="navigation-link" href="#"> Главная </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span>О Седоне</span>
-            </a>
+            <a class="navigation-link" href="#"> О Седоне </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">
-              <span>Гостиницы</span>
-            </a>
+            <a class="navigation-link" href="catalog.html"> Гостиницы </a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
@@ -51,19 +45,15 @@
       <h1 class="main-catalog-header">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-item-link" href="index.html">
-            <span class="visibility-hidden">На главную</span>
-          </a>
+          <a class="breadcrumbs-item-link" href="index.html"> На главную </a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-item-link">
-            <span class="visibility-hidden">Гостиницы</span>
-          </a>
+          <a class="breadcrumbs-item-link"> Гостиницы </a>
         </li>
       </ul>
       <section class="filters">
-        <h2 class="visibility-hidden"></h2>
-        <from class="catalog-filter">
+        <h2 class="visibility-hidden">Фильтры</h2>
+        <form class="catalog-filter">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
@@ -114,17 +104,13 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   Мотель
-                  <input class="control-input" type="checkbox" name="motel" />
+                  <input class="control-input" type="radio" name="motel" />
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   Апартаменты
-                  <input
-                    class="control-input"
-                    type="checkbox"
-                    name="apartment"
-                  />
+                  <input class="control-input" type="radio" name="apartment" />
                 </label>
               </li>
             </ul>
@@ -152,14 +138,14 @@
           </fieldset>
           <button type="submit">Применить</button>
           <button type="reset">Сбросить</button>
-        </from>
+        </form>
       </section>
       <section class="catalog-products">
         <h2 class="catalog-products-header">Найдено гостиниц: 38</h2>
         <select class="catalog-products-options">
-          <option vlaue="popular">Саначала популярные</option>
-          <option vlaue="cheap">Саначала дешевые</option>
-          <option vlaue="expensive">Саначала дорогие</option>
+          <option value="popular">Саначала популярные</option>
+          <option value="cheap">Саначала дешевые</option>
+          <option value="expensive">Саначала дорогие</option>
         </select>
         <ul class="view-btn-list">
           <li class="view-btn-item">
@@ -236,31 +222,29 @@
             <p class="product-card-raiting">Рейтинг 5,0</p>
           </li>
         </ul>
-        <section class="pagination">
-          <ul class="pagination-list">
-            <li class="pagination-item">
-              <button
-                class="pagination-item-btn pagination-item-btn-current"
-                type="button"
-              >
-                1
-              </button>
-            </li>
-            <li class="pagination-item">
-              <button class="pagination-item-btn" type="button">2</button>
-            </li>
-            <li class="pagination-item">
-              <button class="pagination-item-btn" type="button">3</button>
-            </li>
-            <li class="pagination-item">
-              <button class="pagination-item-btn" type="button">4</button>
-            </li>
-            <li class="pagination-item">...</li>
-            <li class="pagination-item">
-              <button class="pagination-item-btn" type="button">10</button>
-            </li>
-          </ul>
-        </section>
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <button
+              class="pagination-item-btn pagination-item-btn-current"
+              type="button"
+            >
+              1
+            </button>
+          </li>
+          <li class="pagination-item">
+            <button class="pagination-item-btn" type="button">2</button>
+          </li>
+          <li class="pagination-item">
+            <button class="pagination-item-btn" type="button">3</button>
+          </li>
+          <li class="pagination-item">
+            <button class="pagination-item-btn" type="button">4</button>
+          </li>
+          <li class="pagination-item">...</li>
+          <li class="pagination-item">
+            <button class="pagination-item-btn" type="button">10</button>
+          </li>
+        </ul>
       </section>
       <section class="newsletter">
         <h2 class="visibility-hidden">Рассылка</h2>
@@ -272,7 +256,7 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <input type="email" placeholder="Ваш e-mail" />
+          <input type="email" placeholder="Ваш e-mail" required name="email" />
           <button class="btn newsletter-btn" type="submit">Подписаться</button>
         </form>
       </section>
@@ -295,9 +279,7 @@
           </a>
         </li>
       </ul>
-      <a class="phone" href="tel:+78128121212"
-        ><span class="phone-text">+7 (812) 812-12-12</span></a
-      >
+      <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       <a class="copyright" href="https://htmlacademy.ru">
         <img class="html-academy-logo" src="#" alt="Логотип HTML Academy" />
       </a>
