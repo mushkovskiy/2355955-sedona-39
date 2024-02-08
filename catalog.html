@@ -7,13 +7,13 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-logo" href="#">
+      <a class="main-logo" href="index.html">
         <img src="#" alt="Логотип Седона город в Аризоне" />
       </a>
       <nav class="main-navigation">
         <ul class="navigation-list">
           <li class="navigation-item navigation-item-current">
-            <a class="navigation-link" href="#"> Главная </a>
+            <a class="navigation-link" href="index.html"> Главная </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#"> О Седоне </a>
@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <button class="btn navigation-btn" type="button">ХОЧУ СЮДА!</button>
+            <button class="btn navigation-btn" type="button">Хочу сюда!</button>
           </li>
         </ul>
       </nav>
@@ -174,7 +174,11 @@
             <p class="product-card-item-price">от 4000 Р</p>
             <button class="product-card-btn" type="button">Подробнее</button>
             <button class="product-card-btn" type="button">В избранное</button>
-            <p class="product-card-stars product-card-stars-4">
+            <p
+              class="product-card-stars product-card-stars-4"
+              role="img"
+              aria-label="4 звезды"
+            >
               <span class="visibility-hidden">4 звезды</span>
             </p>
             <p class="product-card-raiting">Рейтинг 8,5</p>
@@ -188,7 +192,11 @@
             <p class="product-card-item-price">от 5000 Р</p>
             <button class="product-card-btn" type="button">Подробнее</button>
             <button class="product-card-btn" type="button">В избранное</button>
-            <p class="product-card-stars product-card-stars-4">
+            <p
+              class="product-card-stars product-card-stars-4"
+              role="img"
+              aria-label="4 звезды"
+            >
               <span class="visibility-hidden">4 звезды</span>
             </p>
             <p class="product-card-raiting">Рейтинг 9,2</p>
@@ -202,7 +210,11 @@
             <p class="product-card-item-price">от 2500 Р</p>
             <button class="product-card-btn" type="button">Подробнее</button>
             <button class="product-card-btn" type="button">В избранное</button>
-            <p class="product-card-stars product-card-stars-4">
+            <p
+              class="product-card-stars product-card-stars-4"
+              role="img"
+              aria-label="3 звезды"
+            >
               <span class="visibility-hidden">3 звезды</span>
             </p>
             <p class="product-card-raiting">Рейтинг 6,9</p>
@@ -216,7 +228,11 @@
             <p class="product-card-item-price">от 1500 Р</p>
             <button class="product-card-btn" type="button">Подробнее</button>
             <button class="product-card-btn" type="button">В избранное</button>
-            <p class="product-card-stars product-card-stars-4">
+            <p
+              class="product-card-stars product-card-stars-4"
+              role="img"
+              aria-label="2 звезды"
+            >
               <span class="visibility-hidden">2 звезды</span>
             </p>
             <p class="product-card-raiting">Рейтинг 5,0</p>
@@ -256,7 +272,15 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <input type="email" placeholder="Ваш e-mail" required name="email" />
+          <label class="visibility-hidden">
+            Укажите ваш email
+            <input
+              type="email"
+              placeholder="Ваш e-mail"
+              required
+              name="email"
+            />
+          </label>
           <button class="btn newsletter-btn" type="submit">Подписаться</button>
         </form>
       </section>

@@ -6,13 +6,13 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-logo" href="#">
+      <a class="main-logo" href="index.html" aria-current="page">
         <img src="#" alt="Логотип Седона город в Аризоне" />
       </a>
       <nav class="main-navigation">
         <ul class="navigation-list">
           <li class="navigation-item navigation-item-current">
-            <a class="navigation-link" href="#"> Главная </a>
+            <a class="navigation-link" href="index.html"> Главная </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#"> О Седоне </a>
@@ -138,7 +138,15 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <input type="email" placeholder="Ваш e-mail" required name="email" />
+          <label class="visibility-hidden">
+            Укажите ваш email
+            <input
+              type="email"
+              placeholder="Ваш e-mail"
+              required
+              name="email"
+            />
+          </label>
           <button class="btn newsletter-btn" type="submit">Подписаться</button>
         </form>
       </section>
