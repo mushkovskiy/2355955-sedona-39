@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 .main-catalog {
-  background: url("../images/filter-background.jpg") no-repeat 0% 0% / auto auto;
+  background: url("../images/filter-background.jpg") no-repeat 0% 0% / 100% auto;
 }
 
 .footer {
