@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="   viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./styles/catalog.css" rel="stylesheet" type="text/css" />
+    <link href="./styles//normalize.css" rel="stylesheet" type="text/css" />
+    <link href="./styles/index.css" rel="stylesheet" type="text/css" />
     <title>Гостиницы</title>
   </head>
   <body>
@@ -52,7 +53,18 @@
         <h1 class="main-catalog-header">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-item-link" href="index.html"> На главную </a>
+            <a
+              class="breadcrumbs-item-link breadcrumbs-item-link-home-page"
+              href="index.html"
+            >
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a
+              class="breadcrumbs-item-link breadcrumbs-item-link-home-arrow"
+              href="index.html"
+            >
+            </a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-item-link"> Гостиницы </a>
@@ -132,14 +144,26 @@
             </fieldset>
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <label class="catalog-filter-range-control">
+              <label class="catalog-filter-range-control" for="min-price">
                 От
-                <input type="text" name="min-price" value="0" />
               </label>
-              <label class="catalog-filter-range-control">
+              <input
+                type="text"
+                class="price-value"
+                id="min-price"
+                name="min-price"
+                value="0"
+              />
+              <label class="catalog-filter-range-control" for="max-price">
                 До
-                <input type="text" name="max-price" value="9000" />
               </label>
+              <input
+                type="text"
+                class="price-value"
+                id="max-price"
+                name="max-price"
+                value="9000"
+              />
               <button class="filter-range-handle-min" type="button">
                 <span class="visibility-hidden"
                   >Управление минимальной стоимостью</span
@@ -151,31 +175,64 @@
                 >
               </button>
             </fieldset>
-            <button type="submit">Применить</button>
-            <button type="reset">Сбросить</button>
+            <button type="submit" class="btn submit-btn">Применить</button>
+            <button type="reset" class="btn reset-btn">Сбросить</button>
           </form>
         </section>
         <section class="catalog-products">
           <h2 class="catalog-products-header">Найдено гостиниц: 38</h2>
           <select class="catalog-products-options">
             <option value="popular">Саначала популярные</option>
-            <option value="cheap">Саначала дешевые</option>
+            <option value="cheap" selected>Саначала дешевые</option>
             <option value="expensive">Саначала дорогие</option>
           </select>
           <ul class="view-btn-list">
-            <li class="view-btn-item">
-              <a class="view-btn-item">
+            <li class="view-btn-item view-btn-item-selected">
+              <a class="view-btn-item-link">
                 <span class="visibility-hidden">Отображение плиткой</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="14"
+                  fill="none"
+                >
+                  <path
+                    fill="#000"
+                    d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"
+                  />
+                </svg>
               </a>
             </li>
             <li class="view-btn-item">
-              <a class="view-btn-item">
+              <a class="view-btn-item-link">
                 <span class="visibility-hidden">Отображение списком</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="14"
+                  fill="none"
+                >
+                  <path
+                    fill="#000"
+                    d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"
+                  />
+                </svg>
               </a>
             </li>
             <li class="view-btn-item">
-              <a class="view-btn-item">
+              <a class="view-btn-item-link">
                 <span class="visibility-hidden">Отображение карточек</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="14"
+                  fill="none"
+                >
+                  <path
+                    fill="#000"
+                    d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"
+                  />
+                </svg>
               </a>
             </li>
           </ul>
@@ -192,8 +249,16 @@
               </a>
               <p class="product-card-item-type">Гостиница</p>
               <p class="product-card-item-price">от 4000 Р</p>
-              <button class="product-card-btn" type="button">Подробнее</button>
-              <button class="product-card-btn" type="button">
+              <button
+                class="product-card-btn product-card-btn-details"
+                type="button"
+              >
+                Подробнее
+              </button>
+              <button
+                class="product-card-btn product-card-btn-favourite"
+                type="button"
+              >
                 В избранное
               </button>
               <p
@@ -217,7 +282,12 @@
               </a>
               <p class="product-card-item-type">Гостиница</p>
               <p class="product-card-item-price">от 5000 Р</p>
-              <button class="product-card-btn" type="button">Подробнее</button>
+              <button
+                class="product-card-btn product-card-btn-details"
+                type="button"
+              >
+                Подробнее
+              </button>
               <button class="product-card-btn" type="button">
                 В избранное
               </button>
@@ -247,7 +317,7 @@
                 В избранное
               </button>
               <p
-                class="product-card-stars product-card-stars-4"
+                class="product-card-stars product-card-stars-3"
                 role="img"
                 aria-label="3 звезды"
               >
@@ -272,7 +342,7 @@
                 В избранное
               </button>
               <p
-                class="product-card-stars product-card-stars-4"
+                class="product-card-stars product-card-stars-2"
                 role="img"
                 aria-label="2 звезды"
               >
