@@ -33,7 +33,10 @@ html {
   height: 100%;
 }
 ul,
-p {
+p,
+h3,
+h2,
+h1 {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -85,6 +88,7 @@ body {
 .main-navigation {
   display: flex;
   width: 100%;
+  gap: 30px;
 }
 
 .main-navigation .navigation-list:first-child {
@@ -194,26 +198,50 @@ ul.navigation-user .navigation-link {
 .advantages-list li:first-child,
 .advantages-list li:last-child {
   background-color: #82b3d3;
+  width: 100%;
 }
-.advantages-item:not(:first-child, :last-child) {
-  max-width: 400px;
-  display: inline-block;
-  padding: 102px 85px;
-}
+
 .advantages-list-item-wrapper {
-  max-width: 400px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
   padding: 102px 85px;
-  text-align: center;
+}
+
+.advantages-list > li:nth-child(2n) .advantages-list-item-wrapper,
+.advantages-list > li:nth-child(3) .advantages-list-item-wrapper {
+  padding-top: 112.5px;
+  padding-bottom: 112.5px;
+}
+
+.advantages-list-item-wrapper::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  order: -1;
+  margin-bottom: 30px;
+}
+
+.advantages-list > li:nth-child(2n) .advantages-list-item-wrapper::after,
+.advantages-list > li:nth-child(3) .advantages-list-item-wrapper::after {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages-item img {
   vertical-align: bottom;
 }
 .advantages-item-header {
+  margin: 0;
   font-size: 24px;
   line-height: 1.2em;
   font-weight: 700;
+  order: -2;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  width: 175px;
 }
 
 .advantages-item-desc {
@@ -235,13 +263,14 @@ ul.navigation-user .navigation-link {
 } */
 
 .service-title-wrapper {
-  padding: 64px 70px;
+  padding: 81px 85px;
   text-align: center;
 }
 .service-item-header {
   font-size: 30px;
   line-height: 1.2em;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 .search-btn {
   font-size: 20px;
@@ -259,8 +288,19 @@ ul.navigation-user .navigation-link {
 .service-item {
   max-width: 400px;
   padding: 81px 85px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.service-item-desc {
+
+.service-item::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+  border: 1px solid gainsboro;
+  margin-bottom: 30px;
+}
+.service-item-header .service-item-desc {
   max-width: 230px;
 }
 .service-item:first-child,
@@ -286,10 +326,11 @@ ul.navigation-user .navigation-link {
 .booking .description-text {
   margin-bottom: 54px;
 }
+
 .newsletter {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
 
   background-position: center;
   background-size: cover;
@@ -307,17 +348,50 @@ ul.navigation-user .navigation-link {
   background-color: #82b3d3;
   border-radius: 4px;
 }
+.newsletter .description-text {
+  margin-bottom: 54px;
+}
 
+.newsletter-btn {
+  padding: 8px 50px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3em;
+  height: 52px;
+  text-transform: uppercase;
+}
+
+.newsletter-form input {
+  width: 452px;
+  height: 52px;
+  color: rgba(242, 242, 242, 1);
+  text-indent: 20px;
+}
+.newsletter-form input::placeholder {
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #000000;
+  margin-left: 20px;
+}
+.newsletter .intro-text {
+  text-transform: uppercase;
+}
 .footer {
   padding: 40px 70px 30px 70px;
-  display: grid;
-  grid-template-columns: auto 720px auto;
-  column-gap: 41.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+}
+
+.social-item-link {
+  width: 45px;
+  height: 40px;
+  padding: 13px 11px;
 }
 .phone {
   font-size: 40px;
