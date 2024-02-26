@@ -263,7 +263,7 @@ ul.navigation-user .navigation-link {
 } */
 
 .service-title-wrapper {
-  padding: 81px 85px;
+  padding: 81px 347.5px;
   text-align: center;
 }
 .service-item-header {
@@ -272,6 +272,7 @@ ul.navigation-user .navigation-link {
   font-weight: 700;
   margin-bottom: 30px;
 }
+
 .search-btn {
   font-size: 20px;
   line-height: 1.2em;
@@ -292,7 +293,9 @@ ul.navigation-user .navigation-link {
   align-items: center;
   flex-direction: column;
 }
-
+.service-title-wrapper .intro-text {
+  text-transform: uppercase;
+}
 .service-item::before {
   content: "";
   width: 75px;
@@ -360,7 +363,10 @@ ul.navigation-user .navigation-link {
   height: 52px;
   text-transform: uppercase;
 }
-
+.newsletter-form {
+  display: flex;
+  align-items: flex-end;
+}
 .newsletter-form input {
   width: 452px;
   height: 52px;
