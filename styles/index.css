@@ -36,7 +36,8 @@ ul,
 p,
 h3,
 h2,
-h1 {
+h1,
+input {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -236,7 +237,7 @@ ul.navigation-user .navigation-link {
 .advantages-item-header {
   margin: 0;
   font-size: 24px;
-  line-height: 1.2em;
+  line-height: 1.16em;
   font-weight: 700;
   order: -2;
   margin-bottom: 30px;
@@ -246,7 +247,7 @@ ul.navigation-user .navigation-link {
 
 .advantages-item-desc {
   font-size: 18px;
-  line-height: 1.2em;
+  line-height: 1.16em;
 }
 
 .advantages-item-text-color-light {
@@ -348,8 +349,6 @@ ul.navigation-user .navigation-link {
   font-size: 16px;
   line-height: 1.2em;
   color: #ffffff;
-  background-color: #82b3d3;
-  border-radius: 4px;
 }
 .newsletter .description-text {
   margin-bottom: 54px;
@@ -360,23 +359,29 @@ ul.navigation-user .navigation-link {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.3em;
-  height: 52px;
+  background-color: #82b3d3;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   text-transform: uppercase;
+  border: none;
 }
 .newsletter-form {
   display: flex;
-  align-items: flex-end;
 }
 .newsletter-form input {
   width: 452px;
   height: 52px;
-  color: rgba(242, 242, 242, 1);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  filter: opacity(60);
   text-indent: 20px;
+  border: none;
 }
 .newsletter-form input::placeholder {
   font-size: 18px;
   line-height: 1.2em;
   color: #000000;
+  filter: opacity(60%);
   margin-left: 20px;
 }
 .newsletter .intro-text {
@@ -414,9 +419,12 @@ ul.navigation-user .navigation-link {
   overflow: hidden;
 }
 
-/* Стили для index.html */
+/* Стили для catalog.html */
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -428,6 +436,12 @@ ul.navigation-user .navigation-link {
   font-size: 60px;
   line-height: 1.3em;
   color: #ffffff;
+  margin-bottom: 8px;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
 }
 .breadcrumbs-item-link {
   font-size: 16px;
@@ -454,13 +468,72 @@ ul.navigation-user .navigation-link {
 .filters {
   color: #ffffff;
 }
+.catalog-filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-filter-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.catalog-filter-group:nth-child(3) {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .catalog-filter-title {
   font-size: 20px;
   font-weight: 700;
+  margin-bottom: 32px;
+}
+.catalog-filter-list {
+  display: flex;
 }
 
+.catalog-filter-group:first-child .catalog-filter-list,
+.catalog-filter-group:nth-child(2) .catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-end;
+  gap: 32px;
+}
+.price-value {
+  width: 143px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 1.2em;
+  text-indent: 20px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #f2f2f2;
+}
+.slider {
+  width: 287px;
+  height: 20px;
+  border: 1px solid rgb(202, 201, 201);
+}
 .catalog-filter-item {
   line-height: 1.2em;
+}
+
+.catalog-filter-group:first-child .catalog-filter-item,
+.catalog-filter-group:nth-child(2) .catalog-filter-item {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 16px;
 }
 
 .catalog-filter-range-control {

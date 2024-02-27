@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header">
+      <header class="main-header doubble-padding">
         <a class="main-logo" href="index.html">
           <img
             src="./images/svg/logo.svg"
@@ -81,36 +81,33 @@
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
-                    <label class="control">
-                      Бассеин
-                      <input
-                        class="control-input"
-                        type="checkbox"
-                        name="pool"
-                        checked
-                      />
-                    </label>
+                    <label class="control" for="pool"> Бассеин </label>
+                    <input
+                      class="control-input"
+                      type="checkbox"
+                      name="pool"
+                      checked
+                      id="pool"
+                    />
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control">
-                      Парковка
-                      <input
-                        class="control-input"
-                        type="checkbox"
-                        name="parking"
-                        checked
-                      />
-                    </label>
+                    <label class="control" for="parking"> Парковка </label>
+                    <input
+                      class="control-input"
+                      type="checkbox"
+                      name="parking"
+                      checked
+                      id="parking"
+                    />
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control">
-                      Wi-Fi
-                      <input
-                        class="control-input"
-                        type="checkbox"
-                        name="wifi"
-                      />
-                    </label>
+                    <label class="control" for="wifi"> Wi-Fi </label>
+                    <input
+                      class="control-input"
+                      type="checkbox"
+                      name="wifi"
+                      id="wifi"
+                    />
                   </li>
                 </ul>
               </fieldset>
@@ -118,31 +115,32 @@
                 <legend class="catalog-filter-title">Тип жилья:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
-                    <label class="control">
-                      Гостиница
-                      <input
-                        class="control-input"
-                        type="radio"
-                        name="hostel"
-                        checked
-                      />
-                    </label>
+                    <label class="control" for="hostel"> Гостиница </label>
+                    <input
+                      class="control-input"
+                      type="radio"
+                      name="hostel"
+                      checked
+                      id="hostel"
+                    />
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control">
-                      Мотель
-                      <input class="control-input" type="radio" name="motel" />
-                    </label>
+                    <label class="control" for="motel"> Мотель </label>
+                    <input
+                      class="control-input"
+                      type="radio"
+                      name="motel"
+                      id="motel"
+                    />
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control">
-                      Апартаменты
-                      <input
-                        class="control-input"
-                        type="radio"
-                        name="apartment"
-                      />
-                    </label>
+                    <label class="control" for="apartment"> Апартаменты </label>
+                    <input
+                      class="control-input"
+                      type="radio"
+                      name="apartment"
+                      id="apartment"
+                    />
                   </li>
                 </ul>
               </fieldset>
@@ -168,19 +166,23 @@
                   name="max-price"
                   value="9000"
                 />
-                <button class="filter-range-handle-min" type="button">
-                  <span class="visibility-hidden"
-                    >Управление минимальной стоимостью</span
-                  >
-                </button>
-                <button class="filter-range-handle-max" type="button">
-                  <span class="visibility-hidden"
-                    >Управление максимальной стоимостью</span
-                  >
-                </button>
+                <div class="slider">
+                  <!-- <button class="filter-range-handle-min" type="button">
+                    <span class="visibility-hidden"
+                      >Управление минимальной стоимостью</span
+                    >
+                  </button>
+                  <button class="filter-range-handle-max" type="button">
+                    <span class="visibility-hidden"
+                      >Управление максимальной стоимостью</span
+                    >
+                  </button> -->
+                </div>
               </fieldset>
-              <button type="submit" class="btn submit-btn">Применить</button>
-              <button type="reset" class="btn reset-btn">Сбросить</button>
+              <div class="btn-wrapper">
+                <button type="submit" class="btn submit-btn">Применить</button>
+                <button type="reset" class="btn reset-btn">Сбросить</button>
+              </div>
             </form>
           </section>
         </div>
