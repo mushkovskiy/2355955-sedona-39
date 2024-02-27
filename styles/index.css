@@ -471,7 +471,6 @@ ul.navigation-user .navigation-link {
 .catalog-filter {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   gap: 70px;
 }
 
