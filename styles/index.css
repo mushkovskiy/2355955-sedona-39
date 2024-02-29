@@ -582,9 +582,11 @@ input[type="radio"] {
 .view-btn-item {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 17px 16px;
 }
 .view-btn-item-link {
+  border: 1px solid red;
+  padding: 17px 16px;
+  cursor: pointer;
 }
 .tile-display {
   background-image: url("../images/svg/tile-display.svg");
