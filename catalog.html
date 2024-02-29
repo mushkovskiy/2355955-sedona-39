@@ -163,16 +163,16 @@
           </select>
           <ul class="view-btn-list">
             <li class="view-btn-item view-btn-item-selected tile-display">
-              <a class="view-btn-item-link">
+              <a class="view-btn-item-link" href="#">
                 <span class="visibility-hidden">Отображение плиткой</span>
               </a>
             </li>
-            <li class="view-btn-item list-display">
+            <li class="view-btn-item list-display" href="#">
               <a class="view-btn-item-link">
                 <span class="visibility-hidden">Отображение списком</span>
               </a>
             </li>
-            <li class="view-btn-item card-display">
+            <li class="view-btn-item card-display" href="#">
               <a class="view-btn-item-link">
                 <span class="visibility-hidden">Отображение карточек</span>
               </a>
@@ -198,7 +198,7 @@
                 Подробнее
               </button>
               <button
-                class="btn product-card-btn product-card-btn-favourite"
+                class="btn product-card-btn product-card-btn-add-favourite"
                 type="button"
               >
                 В избранное
@@ -234,7 +234,7 @@
                 class="btn product-card-btn product-card-btn-favourite"
                 type="button"
               >
-                В избранное
+                В избранном
               </button>
               <p
                 class="product-card-stars product-card-stars-4"
@@ -264,7 +264,7 @@
                 Подробнее
               </button>
               <button
-                class="btn product-card-btn product-card-btn-favourite"
+                class="btn product-card-btn product-card-btn-add-favourite"
                 type="button"
               >
                 В избранное
@@ -297,7 +297,7 @@
                 Подробнее
               </button>
               <button
-                class="btn product-card-btn product-card-btn-favourite"
+                class="btn product-card-btn product-card-btn-add-favourite"
                 type="button"
               >
                 В избранное
@@ -330,7 +330,9 @@
             <li class="pagination-item">
               <button class="pagination-item-btn" type="button">4</button>
             </li>
-            <li class="pagination-item">...</li>
+            <li class="pagination-item pagination-item-divider">
+              <span>...</span>
+            </li>
             <li class="pagination-item">
               <button class="pagination-item-btn" type="button">10</button>
             </li>
@@ -339,7 +341,9 @@
         <section class="newsletter">
           <h2 class="visibility-hidden">Рассылка</h2>
           <p class="intro-text into-text-color-1">Подпишитесь на рассылку</p>
-          <p class="description-text description-text-color-1">
+          <p
+            class="description-text description-text-limit-width description-text-color-1"
+          >
             Только полезная информация и никакого спама, честное бойскаутское!
           </p>
           <form
@@ -356,6 +360,7 @@
               placeholder="Ваш e-mail"
               required
               name="email"
+              class="newsletter-color-input"
             />
             <button class="btn newsletter-btn" type="submit">
               Подписаться

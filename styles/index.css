@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,25 +10,10 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/pt-sans-italic.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
-  font-display: swap;
-}
 html {
   height: 100%;
 }
@@ -122,6 +107,9 @@ ul.navigation-user .navigation-link {
 .btn {
   font-family: "PT Sans", sans-serif;
 }
+.btn:hover {
+  cursor: pointer;
+}
 .navigation-btn {
   text-transform: uppercase;
   font-size: 16px;
@@ -165,6 +153,10 @@ ul.navigation-user .navigation-link {
   font-size: 22px;
   line-height: 1.2em;
 }
+.description-text-limit-width {
+  max-width: 475px;
+  text-align: center;
+}
 .description-text-color-dark {
   color: #000000;
 }
@@ -177,6 +169,7 @@ ul.navigation-user .navigation-link {
 }
 .intro-text {
   margin-bottom: 25px;
+  text-align: center;
 }
 .advantages-item {
   display: flex;
@@ -189,6 +182,12 @@ ul.navigation-user .navigation-link {
 .advantages-title-wrapper {
   padding: 69px 90px;
   text-align: center;
+}
+.advantages-title-wrapper .intro-text {
+  max-width: 620px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }
 .advantages-item:nth-of-type(2n) {
   background-color: rgba(131, 179, 211, 0.12);
@@ -260,18 +259,16 @@ ul.navigation-user .navigation-link {
   background-color: #82b3d3;
 }
 
-/* .advantages-item-color-dark {
-} */
-
 .service-title-wrapper {
   padding: 81px 347.5px;
   text-align: center;
 }
 .service-item-header {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.2em;
   font-weight: 700;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .search-btn {
@@ -280,6 +277,8 @@ ul.navigation-user .navigation-link {
   color: #ffffff;
   background-color: #756157;
   border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .service-list {
   display: flex;
@@ -326,11 +325,14 @@ ul.navigation-user .navigation-link {
 }
 .booking .intro-text {
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .booking .description-text {
   margin-bottom: 54px;
 }
-
+.line-break {
+  display: block;
+}
 .newsletter {
   display: flex;
   flex-direction: column;
@@ -376,6 +378,10 @@ ul.navigation-user .navigation-link {
   filter: opacity(60);
   text-indent: 20px;
   border: none;
+}
+
+.newsletter-color-input {
+  background-color: #f2f2f2;
 }
 .newsletter-form input::placeholder {
   font-size: 18px;
@@ -529,8 +535,14 @@ input[type="radio"] {
   text-transform: uppercase;
   border: none;
   font-weight: 700;
+  font-size: 16px;
 }
-
+.submit-btn:hover {
+  cursor: pointer;
+}
+.reset-btn:hover {
+  cursor: pointer;
+}
 .reset-btn {
   background-color: transparent;
   color: #ffffff;
@@ -538,6 +550,7 @@ input[type="radio"] {
   text-transform: uppercase;
   border: none;
   font-weight: 700;
+  font-size: 16px;
 }
 .catalog-products {
   display: flex;
@@ -548,6 +561,7 @@ input[type="radio"] {
   padding-right: 70px;
   padding-left: 70px;
 }
+
 .catalog-products-header {
   font-size: 30x;
   line-height: 1.2em;
@@ -556,10 +570,17 @@ input[type="radio"] {
   text-transform: uppercase;
 }
 .products-card-list {
+  position: relative;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   gap: 20px;
+}
+.products-card-list::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
 }
 .catalog-products-options {
   font-family: "PT Sans", sans-serif;
@@ -567,11 +588,15 @@ input[type="radio"] {
   color: #333333;
   line-height: 1.16em;
   margin-left: auto;
-  padding: 14px 20px;
   width: 292px;
-
+  height: 49px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  text-indent: 20px;
+  appearance: none;
+  background-image: url("../images//svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
 }
 
 .view-btn-list {
@@ -584,8 +609,12 @@ input[type="radio"] {
   border-radius: 4px;
 }
 .view-btn-item-link {
-  border: 1px solid red;
-  padding: 17px 16px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.view-btn-item:hover {
   cursor: pointer;
 }
 .tile-display {
@@ -606,6 +635,20 @@ input[type="radio"] {
 .view-btn-item-selected {
   border-color: #000000;
 }
+.product-card-item {
+  padding: 20px;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 340px;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.product-card-item:last-child {
+  margin-bottom: 20px;
+}
 .product-card-list-link {
   text-decoration: none;
 }
@@ -615,22 +658,37 @@ input[type="radio"] {
   font-weight: 700;
   color: #000000;
 }
+
 .product-card-btn {
   font-size: 16px;
   line-height: 1.2em;
   border-radius: 4px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
 }
 .product-card-btn-details {
   background-color: #756157;
 }
 .product-card-btn-favourite {
+  background-color: #7db54f;
+}
+.product-card-btn-add-favourite {
   background-color: #82b3d3;
 }
+
 .product-card-raiting {
   width: 140px;
   font-size: 16px;
   line-height: 1.2em;
   background-color: #f2f2f2;
+  padding: 8px 22px;
+  border-radius: 4px;
+  color: #333333;
+  text-align: center;
+  text-transform: uppercase;
 }
 .product-card-stars::after {
   content: "";
@@ -651,16 +709,41 @@ input[type="radio"] {
 .product-card-stars-2 {
   width: 36px;
 }
-
+.pagination-list {
+  display: flex;
+  gap: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+.pagination-item {
+  position: relative;
+}
 .pagination-item-btn {
   font-family: "PT Sans", sans-serif;
   color: #ffffff;
   font-size: 20px;
   line-height: 1.8em;
   text-align: center;
+  vertical-align: baseline;
   background-color: #82b3d3;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 4px;
+}
+.pagination-item-btn:hover {
+  cursor: pointer;
+}
+.pagination-item-divider {
   width: 60px;
   height: 60px;
+}
+.pagination-item-divider span {
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .pagination-item-btn-current {
   color: #000000;
