@@ -435,6 +435,9 @@ ul.navigation-user .navigation-link {
   margin-bottom: 50px;
   padding: 35px 70px 70px;
 }
+.main-catalog {
+  flex-grow: 1;
+}
 .main-catalog-header {
   font-size: 60px;
   line-height: 1.3em;
