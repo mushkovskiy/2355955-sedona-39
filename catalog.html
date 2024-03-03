@@ -8,11 +8,13 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header doubble-padding">
-        <a class="main-logo" href="index.html">
+       <header class="main-header doubble-padding">
+        <a class="main-logo" href="index.html" aria-current="page">
           <img
             src="./images/svg/logo.svg"
             alt="Логотип Седона город в Аризоне"
+            width="140"
+            height="70"
           />
         </a>
         <nav class="main-navigation">
@@ -40,12 +42,8 @@
                 >
               </a>
             </li>
-            <li class="btn navigation-item">
-              <button class="btn navigation-btn" type="button">
-                Хочу сюда!
-              </button>
-            </li>
           </ul>
+          <button class="btn navigation-btn" type="button">Хочу сюда!</button>
         </nav>
       </header>
       <main class="main-container">
@@ -424,14 +422,19 @@
             </a>
           </li>
         </ul>
-        <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="copyright" href="https://htmlacademy.ru">
-          <img
-            class="html-academy-logo"
-            src="./images/svg/academy-label.svg"
-            alt="Логотип HTML Academy"
-          />
-        </a>
+
+        <div class="phone-link-wrapper">
+          <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </div>
+        <p class="footer-logo-paragraph">
+          <a class="copyright" href="https://htmlacademy.ru">
+            <img
+              class="html-academy-logo"
+              src="./images/svg/academy-label.svg"
+              alt="Логотип HTML Academy"
+            />
+          </a>
+        </p>
       </footer>
     </div>
   </body>
