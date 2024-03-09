@@ -22,5 +22,9 @@
   "html.format.indentInnerHtml": true,
   "editor.defaultFormatter": "EditorConfig.EditorConfig",
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "css.format.enable": true
 }
