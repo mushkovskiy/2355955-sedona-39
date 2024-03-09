@@ -43,7 +43,9 @@ body {
   background-color: #f2f2f2;
   min-width: 1200px;
 }
-
+img {
+  max-width: 100%;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
