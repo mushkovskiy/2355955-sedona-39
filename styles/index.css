@@ -672,6 +672,7 @@ input[type="radio"] {
  border-radius: 4px;
  border: 1px solid #E6E6E6;
  display: grid;
+ grid-template-columns: 300px;
  grid-template-rows: 212px 1fr auto;
 
 }
