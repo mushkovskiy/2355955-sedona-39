@@ -136,49 +136,63 @@ body {
 }
 .navigation-user {
   display: flex;
-  gap: 24px;
-}
-ul.navigation-user .navigation-link {
-  padding-left: 12px;
-  padding-right: 12px;
-
 
 }
-
-.navigation-user .navigation-item:nth-child(1) .navigation-link {
-  background-image: url('../images/svg/search.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-
-
-.navigation-user .navigation-item:nth-child(2) .navigation-link {
+.navigation-user .navigation-link {
+  text-decoration: none;
   position: relative;
-  background-image: url('../images/svg/favourite.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  display: block;
+  width: 44px;
+  height: 64px;
 }
-.navigation-user .navigation-item:nth-child(2) .navigation-link::before {
-  content: '12';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
+
+.navigation-user .navigation-link::before {
+  content: "";
+  position: relative;
+  display: inline-block;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  background-color: #7DB54F;
-  color: #FFFFFF;
-  top: 0;
-  right: -5px;
-  font-size: 10px;
-  line-height: 1;
+  background-color: #000000;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.navigation-user .navigation-item:nth-child(2) .navigation-link:hover::before{
+.navigation-link.search::before {
+   mask-size: 19px 19px;
+   mask-image: url('../images/svg/search.svg');
+}
+
+.navigation-link.favourite::before{
+   mask-size: 18px 17px;
+   mask-image: url('../images/svg/favourite.svg');
+}
+
+.navigation-user .navigation-link:hover::before {
+ background-color: #756157;
+}
+.navigation-user .navigation-link:active::before {
+ background-color: rgba(117, 97, 87, 0.6);
+}
+
+.favourite-quantity {
+  position: absolute;
+  padding: 5px;
+  left: 20px;
+  top: 11px;
+  font-size: 10px;
+  line-height: 10px;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  border-radius: 50%;
+}
+
+.navigation-user .navigation-link:hover .favourite-quantity {
   opacity: 1;
 }
+
 
 .btn {
   padding: 0;
