@@ -129,8 +129,10 @@ body {
 .navigation-link:hover{
   opacity: 0.7;
 }
+
 .navigation-link:active{
-  color: rgb(60, 60, 60);
+  color: rgba(60, 60, 60);
+   opacity: 0.4;
 }
 .navigation-user {
   display: flex;
@@ -148,6 +150,7 @@ ul.navigation-user .navigation-link {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 
 
 .navigation-user .navigation-item:nth-child(2) .navigation-link {
@@ -171,9 +174,12 @@ ul.navigation-user .navigation-link {
   right: -5px;
   font-size: 10px;
   line-height: 1;
-
-
 }
+
+.navigation-user .navigation-item:nth-child(2) .navigation-link:hover::before{
+  opacity: 1;
+}
+
 .btn {
   padding: 0;
   font-family: "PT Sans", sans-serif;
