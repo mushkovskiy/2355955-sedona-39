@@ -598,6 +598,7 @@ ul.navigation-user .navigation-link {
 .breadcrumbs-item-link {
   font-size: 16px;
   color: #ffffff;
+  text-decoration: none;
 
 }
 .breadcrumbs-item-link-home-page::after {
@@ -624,15 +625,15 @@ ul.navigation-user .navigation-link {
   height: 11px;
 }
 
-.breadcrumbs-item:hover {
+.breadcrumbs-item-link:hover {
   color: rgba(255, 255, 255, 0.6);
 }
-.breadcrumbs-item:active {
+.breadcrumbs-item-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.breadcrumbs-item:not(:nth-child(2)):hover{
-  cursor: pointer;
+.breadcrumbs-item:nth-child(2) .breadcrumbs-item-link:hover{
+  cursor: auto;
 }
 
 .filters {
