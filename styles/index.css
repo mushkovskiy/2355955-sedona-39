@@ -603,11 +603,16 @@ ul.navigation-user .navigation-link {
 .breadcrumbs-item-link-home-page::after {
   content: "";
   display: inline-block;
-  mask-image: url("../images/svg/home-page.svg")  rgb(255,255,255);
+  mask-image: url("../images/svg/home-page.svg");
+  background-color: rgb(255, 255, 255);
   mask-size: cover;
   mask-repeat: no-repeat;
   width: 13px;
   height: 13px;
+}
+
+.breadcrumbs-item-link-home-page::after:hover{
+  background-color:  rgba(255,255,255, 0.3);;
 }
 
 .breadcrumbs-item-link-home-arrow {
@@ -619,19 +624,14 @@ ul.navigation-user .navigation-link {
   height: 11px;
 }
 
-.breadcrumbs-item-link:hover {
+.breadcrumbs-item:hover {
   color: rgba(255, 255, 255, 0.6);
 }
-.breadcrumbs-item-link:first-child:hover {
-   mask-image: url("../images/svg/home-page.svg") rgba(255,255,255, 0.3);
-
-}
-
-.breadcrumbs-item-link:active {
+.breadcrumbs-item:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.breadcrumbs-item-link:not(:nth-child(2)):hover{
+.breadcrumbs-item:not(:nth-child(2)):hover{
   cursor: pointer;
 }
 
