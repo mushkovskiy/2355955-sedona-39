@@ -68,13 +68,19 @@ body {
   color: #000000;
 }
 .main-logo {
-  margin-bottom: -6px;
+
   z-index: 2;
   margin-right: 30px;
 }
 
-
+.main-logo-img {
+  display: block;
+ margin-bottom: -6px;
+}
 .main-logo-img:hover {
+  opacity: 0.7;
+}
+.main-logo-img:active {
   opacity: 0.5;
 }
 
@@ -100,6 +106,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   padding: 20px 16px;
   font-size: 20px;
   display: block;
@@ -107,6 +114,17 @@ body {
   color: inherit;
   text-align: left;
   text-decoration: none;
+}
+
+.navigation-link[aria-current="page"]::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #756257;
+
+  right: 16px;
+  left: 16px;
+  bottom: -1px;
 }
 .navigation-link:hover{
   opacity: 0.7;
