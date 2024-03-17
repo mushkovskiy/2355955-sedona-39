@@ -32,6 +32,7 @@ ul{
 
 * {
   box-sizing: border-box;
+
 }
 .doubble-padding {
   padding-left: 70px;
@@ -47,9 +48,7 @@ body {
   background-color: #f2f2f2;
   min-width: 1200px;
 }
-img {
-  max-width: 100%;
-}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -73,8 +72,15 @@ img {
   z-index: 2;
   margin-right: 30px;
 }
-.main-logo img {
-  vertical-align: middle;
+
+
+.main-logo-img:hover {
+  opacity: 0.5;
+}
+
+
+.main-logo-img:hover {
+  fill-opacity: 0.9;
 }
 .main-navigation {
   display: flex;
@@ -101,6 +107,12 @@ img {
   color: inherit;
   text-align: left;
   text-decoration: none;
+}
+.navigation-link:hover{
+  opacity: 0.7;
+}
+.navigation-link:active{
+  color: rgb(60, 60, 60);
 }
 .navigation-user {
   display: flex;
@@ -163,21 +175,17 @@ ul.navigation-user .navigation-link {
   background-color: #756157;
   padding: 8px 34px;
 }
+
 .navigation-btn:hover, .search-btn:hover {
   background-color: #615048;
 }
 
-.navigation-btn:focus-visible, .search-btn:focus-visible {
-  background-color: #615048;
-   filter: opacity(30)
+.navigation-btn:active, .search-btn:active {
+  background-color: #756157;
+  color: rgba(255,255,255, 0.3);
 }
 
-@supports  not selector(:focus-visible) {
-  .navigation-btn:focus, .search-btn:focus {
-    background-color: #615048;
-     filter: opacity(30);
-  }
-}
+
 .navigation-btn:disabled, .search-btn:disabled {
   background-color: #E5E5E5;
 }
@@ -446,8 +454,18 @@ ul.navigation-user .navigation-link {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   text-transform: uppercase;
-
 }
+
+.newsletter-btn:hover {
+  background-color: #68A2CA;
+}
+.newsletter-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.newsletter-btn:disabled {
+  color: #E5E5E5;
+}
+
 .newsletter-form {
   display: flex;
 }
@@ -497,6 +515,7 @@ ul.navigation-user .navigation-link {
 
 }
 .social-item-link-icon {
+  fill: #83B3D3;
   position: absolute;
   top:0;
   right: 0;
@@ -507,15 +526,10 @@ ul.navigation-user .navigation-link {
 .social-item-link-icon:hover {
   fill: #68A2CA;
 }
-.social-item-link-icon:focus-visible {
-  fill: #68A2CA;
+.social-item-link-icon:active {
+  fill: rgba(104,162,202, 0.3);
 }
-@supports  not selector(:focus-visible) {
-  .social-item-link-icon, .search-btn:focus {
-    background-color: #615048;
-     filter: opacity(30);
-  }
-}
+
 
 .phone-link-wrapper {
   width: 400px;
@@ -535,17 +549,19 @@ ul.navigation-user .navigation-link {
   color: #756157;
 }
 
-.phone:focus-visible {
+.phone:active {
+  color: rgba(117,97,87, 0.3);
+}
+
+.html-academy-logo{
   color: #756157;
 }
-
-@supports  not selector(:focus-visible) {
-  .phone {
-
-     filter: opacity(30);
-  }
+.developer-logo-img:hover {
+  fill-opacity: 0.7;
 }
-
+.developer-logo-img:active {
+  fill: rgb(60, 60, 60)
+}
 .visibility-hidden {
   position: absolute;
   left: -9999px;
@@ -582,12 +598,13 @@ ul.navigation-user .navigation-link {
 .breadcrumbs-item-link {
   font-size: 16px;
   color: #ffffff;
+
 }
 .breadcrumbs-item-link-home-page::after {
   content: "";
   display: inline-block;
-  background: url("../images/svg/home-page.svg") no-repeat;
-  background-size: cover;
+  mask-image: url("../images/svg/home-page.svg") no-repeat;
+  mask-size: cover;
   width: 13px;
   height: 13px;
 }
@@ -599,6 +616,18 @@ ul.navigation-user .navigation-link {
   background-size: cover;
   width: 8px;
   height: 11px;
+}
+
+.breadcrumbs-item-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+
+}
+.breadcrumbs-item-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-item-link:not(:nth-child(2)):hover{
+  cursor: pointer;
 }
 
 .filters {
@@ -669,9 +698,24 @@ input[type="radio"] {
 }
 .submit-btn:hover {
   cursor: pointer;
+
+}
+.submit-btn:hover {
+  background-color: #68A2CA;
+}
+.submit-btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.submit-btn:disabled {
+  color: #E5E5E5;
 }
 .reset-btn:hover {
   cursor: pointer;
+  color: rgba(255,255,255, 0.7);
+}
+.reset-btn:active {
+  cursor: pointer;
+  color: rgba(255,255,255, 0.3);
 }
 .reset-btn {
   background-color: transparent;
@@ -766,7 +810,10 @@ input[type="radio"] {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.view-btn-item-selected {
+.view-btn-item:hover {
+  border-color: #000000;
+}
+.view-btn-item:active {
   border-color: #000000;
 }
 
@@ -781,6 +828,7 @@ input[type="radio"] {
  gap: 20px;
 
 }
+
 .raiting-wrapper {
   display: flex;
   justify-content: space-between;
@@ -790,7 +838,9 @@ input[type="radio"] {
 .product-card-item-link {
   grid-column: 1 / -1;
 }
-
+.product-card-item-link:hover{
+  opacity: 0.7;
+}
 .product-card-item-link img {
   display: block;
 }
@@ -820,18 +870,49 @@ input[type="radio"] {
   font-weight: 700;
 
 }
+.product-card-btn-favourite {
+  background-color: #7DB54F;
+}
+.product-card-btn-favourite:hover {
+  background-color: #6C9E42;
+}
+.product-card-btn-favourite:active {
+  background-color: #6C9E42;
+  color: rgba(255, 255, 255, 0.3);
+}
 .product-card-btn-details {
   background-color: #756157;
 }
-.product-card-btn-favourite {
-
-  background-color: #7db54f;
-
+.product-card-btn-details:hover {
+   background-color: #615048;
 }
-.product-card-btn-add-to-favourite {
+.product-card-btn-details:active {
+  background-color: #756157;
+  color: rgba(255,255,255, 0.3);
+}
+.product-card-btn-details:disabled {
+  background-color: #E5E5E5;
+}
 
+.product-card-btn-add-to-favourite {
+  background-color: #7db54f;
+}
+
+.product-card-btn-add-to-favourite:hover {
+  background-color: #68A2CA;
+}
+.product-card-btn-add-to-favourite:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.product-card-btn-add-to-favourite:disabled {
+  color: #E5E5E5;
+}
+
+.product-card-btn-add-to-favourite {
   background-color: #82b3d3;
 }
+
+
 
 .product-card-raiting {
   font-size: 16px;
@@ -901,6 +982,12 @@ input[type="radio"] {
 .pagination-item-btn-current {
   color: #000000;
   background-color: #f2f2f2;
+}
+.pagination-item-btn:not(.pagination-item-btn-current):hover {
+  background-color: #68A2CA;
+}
+.pagination-item-btn:not(.pagination-item-btn-current):active {
+  color: rgba(255, 255, 255, 0.3);
 }
 .social-list {
   display: flex;
