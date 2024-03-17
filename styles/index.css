@@ -604,16 +604,15 @@ ul.navigation-user .navigation-link {
 .breadcrumbs-item-link-home-page::after {
   content: "";
   display: inline-block;
-  mask-image: url("../images/svg/home-page.svg");
-  background-color: rgb(255, 255, 255);
-  mask-size: cover;
-  mask-repeat: no-repeat;
+  background-image: url("../images/svg/home-page.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 13px;
   height: 13px;
 }
 
-.breadcrumbs-item-link-home-page::after:hover{
-  background-color:  rgba(255,255,255, 0.3);;
+.breadcrumbs-item-link-home-page:hover::after{
+  opacity: 0.6;
 }
 
 .breadcrumbs-item-link-home-arrow {
