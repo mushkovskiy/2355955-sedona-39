@@ -792,6 +792,11 @@ body {
   background-color: #f2f2f2;
   appearance: textfield;
 }
+.control-input-price::-webkit-outer-spin-button,
+.control-input-price::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
 .control-label-price {
   position: absolute;
   width: 40px;
