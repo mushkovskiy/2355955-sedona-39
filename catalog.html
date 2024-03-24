@@ -25,7 +25,7 @@
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link" href="#"> О Седоне </a>
+              <a class="navigation-link" href="modal.html"> О Седоне </a>
             </li>
 
             <li class="navigation-item">
@@ -80,43 +80,88 @@
 
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
-                <ul class="catalog-filter-list with-gap">
-                  <li class="catalog-filter-item row-reverse">
-                    <label class="control" for="pool"> Бассеин </label>
-                    <input class="control-input" type="checkbox" name="pool" checked id="pool" />
+                <ul class="catalog-filter-list">
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input visibility-hidden" type="checkbox" name="pool"   checked/>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Бассейн</span>
+                    </label>
                   </li>
-                  <li class="catalog-filter-item row-reverse">
-                    <label class="control" for="parking"> Парковка </label>
-                    <input class="control-input" type="checkbox" name="parking" checked id="parking" />
+                  <li class="catalog-filter-item">
+                    <label class="control" >
+                      <input class="control-input visibility-hidden" type="checkbox" name="parking"   />
+                      <span class="control-mark"></span>
+                      <span class="control-label">Парковка</span>
+                    </label>
                   </li>
-                  <li class="catalog-filter-item row-reverse">
-                    <label class="control" for="wifi"> Wi-Fi </label>
-                    <input class="control-input" type="checkbox" name="wifi" id="wifi" />
+                  <li class="catalog-filter-item">
+                    <label class="control" >
+                      <input class="control-input visibility-hidden" type="checkbox" name="wifi" />
+                      <span class="control-mark"></span>
+                      <span class="control-label ">WI-FI</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
 
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Тип жилья:</legend>
-                <ul class="catalog-filter-list with-gap">
-                  <li class="catalog-filter-item row-reverse">
-                    <label class="control" for="hostel"> Гостиница </label>
-                    <input class="control-input" type="radio" name="hostel" checked id="hostel" />
+                <ul class="catalog-filter-list">
+                  <li class="catalog-filter-item">
+                    <label class="control">
+                      <input class="control-input visibility-hidden" type="radio" name="type-hotel" value="hotel" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Гостиница</span>
+                    </label>
                   </li>
                   <li class="catalog-filter-item row-reverse">
-                    <label class="control" for="motel"> Мотель </label>
-                    <input class="control-input" type="radio" name="motel" id="motel" />
+                    <label class="control">
+                      <input class="control-input visibility-hidden" type="radio" name="type-hotel" value="motel">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Мотель</span>
+                    </label>
                   </li>
                   <li class="catalog-filter-item row-reverse">
-                    <label class="control" for="apartment"> Апартаменты </label>
-                    <input class="control-input" type="radio" name="apartment" id="apartment" />
+                    <label class="control">
+                      <input class="control-input visibility-hidden" type="radio" name="type-hotel" value="apartments">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Апартаменты</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
 
+
               <fieldset class="catalog-filter-group with-margin-left-auto">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+
+                <div class="range">
+                  <div class="range-wrapper-inputs">
+                    <label class="control-price">
+                      <input class="control-input-price" type="number" name="price-min" value="0" placeholder="Цена">
+                      <span class="control-label-price">от</span>
+                    </label>
+                    <label class="control-price">
+                      <input class="control-input-price" type="number" name="price-max" value="9000" placeholder="Цена">
+                      <span class="control-label-price">до</span>
+                    </label>
+                  </div>
+
+                  <div class="range-scale">
+                    <div class="range-bar" style="left:0; width:226px;">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visibility-hidden">Минимальная стоимость</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visibility-hidden">Максимальная стоимость</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
               </fieldset>
+            
               <div class="btn-wrapper">
                 <button type="submit" class="btn submit-btn">Применить</button>
                 <button type="reset" class="btn reset-btn">Сбросить</button>

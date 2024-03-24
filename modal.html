@@ -24,7 +24,7 @@
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-link" href="modal.html"> О Седоне </a>
+              <a class="navigation-link" href="#"> О Седоне </a>
             </li>
 
             <li class="navigation-item">
@@ -257,6 +257,70 @@
       </footer>
 
     </div>
+    <div class="modal-container">
+        <!-- Зачем дата атрибут -->
+        <div class="modal modal-search" data-test="modal">          
+            <section class="modal-main-content">
+                <header class="modal-header">
+
+                    <h2 class="modal-tittle">Поиск гостиницы в Седоне</h2>
+                    <button class="modal-close-button" type="button">
+                      <span class="visibility-hidden">Закрыть</span>
+                    </button>
+                </header>
+            <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="field-group date-selection">
+                <label class="form-label" for="date-check-in">Дата Заезда:</label>
+                <input class="field field-date" type="text" id="date-check-in" name="date-check-in" placeholder="Укажите дату" value="27 апреля 2020" required>
+                <p class="message error-message">Мы не можем отправить вас в прошлое.</p>
+              </div>
+  
+              <div class="field-group date-selection">
+                <label class="form-label" for="date-departure">Дата Выезда:</label>
+                <input class="field field-date" type="text" id="date-departure" name="date-departure" placeholder="Укажите дату" value="1 сентября 2023" required>
+                <p class="message">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+  
+              <div class="field-group amount-selection amount-of-adults">
+                <label class="form-label" for="amount-of-adults">Взрослые:</label>
+                <div class="wrapper-field">
+                  <button class="button-step button-step-down" type="button">
+                    <span class="visibility-hidden">Меньше</span>
+                  </button>
+                  <input class="field field-number" type="number" id="amount-of-adults" name="amount-of-adults" value="2" min="1" placeholder="2">
+                  <button class="button-step button-step-up" type="button">
+                    <span class="visibility-hidden">Больше</span>
+                  </button>
+                </div>
+  
+              </div>
+              <div class="field-group amount-selection amount-of-child">
+                <span class="form-label-tooltip">
+                  <label class="form-label" for="amount-of-child">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" aria-labelledby="tooltip-label" type="button">
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+  
+  
+                <div class="wrapper-field">
+                  <button class="button-step button-step-down" type="button">
+                    <span class="visibility-hidden">Меньше</span>
+                  </button>
+                  <input class="field field-number" type="number" id="amount-of-child" name="amount-of-child" value="2" min="0" placeholder="2">
+                  <button class="button-step button-step-up" type="button">
+                    <span class="visibility-hidden">Больше</span>
+                  </button>
+                </div>
+              </div>
+              <button class="btn button-modal" type="submit">найти</button>
+            </form>
+          </section>
+  
+        </div>
+      </div>
   </body>
 
 </html>
